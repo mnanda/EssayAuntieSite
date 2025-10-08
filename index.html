@@ -163,43 +163,51 @@
 		<!-- Two -->
 			<section id="two" class="wrapper style1">
 				<div class="inner">
-					<header class="special major narrow">
-						<small>Aliquam</small>
-						<h2>Consectetuer ligula vulputat</h2>
-						<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ulla mcorper laoreet, lectus arcu pulvinar risus, vitae facilisis</p>
-					</header>
-					<div class="features">
-						<ul class="left">
-							<li class="icon solid alt fa-search">
-								<span class="label">Discovery</span>
-								Discovery Session: Explore your experiences and values
-							</li>
-							<li class="icon solid alt fa-lightbulb">
-								<span class="label">Brainstorm</span>
-								Structured Brainstorming: Develop compelling topics
-							</li>
-							<li class="icon solid alt fa-edit">
-								<span class="label">Writing</span>
-								Collaborative Writing: Multiple drafts and refinement
-							</li>
-						</ul>
-						<object type="image/svg+xml" data="images/pic01-phone.svg"></object>
-						<!--[if lte IE 8]><span class="image fit"><img src="images/pic01.jpg" alt="" /></span><![endif]-->
-						<ul class="right">
-							<li class="icon solid alt fa-clipboard-check">
-								<span class="label">Review</span>
-								Essay Review: Detailed feedback and improvement
-							</li>
-							<li class="icon solid alt fa-trophy">
-								<span class="label">Success</span>
-								Application Strategy: Portfolio planning and timing
-							</li>
-							<li class="icon solid alt fa-heart">
-								<span class="label">Support</span>
-								Ongoing Support: Guidance throughout applications
-							</li>
-						</ul>
+					<div class="how-i-got-here-section" style="display: flex; align-items: flex-start; gap: 3em; text-align: justify;">
+						<div class="headshot-container" style="flex: 0 0 250px; text-align: center;">
+							<img src="https://page.gensparksite.com/v1/base64_upload/08dd01a646bd98a8fc227a78078cd333" 
+								 alt="Amanda Marks - The College Essay Auntie" 
+								 style="width: 250px; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						</div>
+						<div class="text-content" style="flex: 1; text-align: justify;">
+							<h2 style="font-weight: bold; margin-bottom: 1em;"><strong>HOW I GOT HERE</strong></h2>
+							<p style="font-weight: bold; text-align: justify;"><strong>I'm a product of the New York City private school world and a graduate of Wesleyan University, so the ecosystem of elite admissions has long been familiar to me. I started working in the office of test prep giant The Princeton Review when I was a senior in high school. After college, while growing a career in the entertainment industry, I consistently worked on the side as a tutor for the SAT, GMAT & LSAT.</strong></p>
+							<p style="font-weight: bold; text-align: justify;"><strong>Because it's more personal and creative than test prep, my favorite part was always when I'd continue to work with my standardized test students on their essays and applications. Even after I stopped tutoring, friends with kids would reach out for essay help, all too aware that no matter how smart and accomplished they might be, it's utterly impossible for a parent to help with this task. That's where the Auntie part comes in. I love digging in deep with my essay students and getting to know them through this exciting-yet-vulnerable, life-changing period. In fact, I consider it a privilege.</strong></p>
+							<p style="font-weight: bold; text-align: justify;"><strong>My story-telling chops are top-notch. I'm an award-winning writer/producer who did years in the trenches of the movie trailer business before pivoting to non-fiction television. Most recently I've been working on Discovery Channel's Expedition Unknown for six seasons and have filmed in over 20 countries. Helping students find their stories remains my favorite creative work.</strong></p>
+						</div>
 					</div>
+					
+					<!-- Mobile responsive styles -->
+					<style>
+						.how-i-got-here-section .text-content p {
+							font-size: 1.3em !important;
+							line-height: 1.6 !important;
+						}
+						
+						.how-i-got-here-section .text-content h2 {
+							font-size: 2em !important;
+						}
+						
+						@media (max-width: 768px) {
+							.how-i-got-here-section {
+								flex-direction: column !important;
+								align-items: center !important;
+								gap: 2em !important;
+							}
+							.headshot-container {
+								flex: none !important;
+							}
+							.text-content {
+								text-align: justify !important;
+							}
+							.how-i-got-here-section .text-content p {
+								font-size: 1.1em !important;
+							}
+							.how-i-got-here-section .text-content h2 {
+								font-size: 1.5em !important;
+							}
+						}
+					</style>
 				</div>
 			</section>
 
