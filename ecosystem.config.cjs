@@ -2,11 +2,11 @@ module.exports = {
   apps: [
     {
       name: 'webapp',
-      script: 'node',
-      args: 'server.js',
+      script: './node_modules/.bin/http-server',
+      args: '. --port 3000 --host 0.0.0.0 --cors',
       env: {
         NODE_ENV: 'development',
-        PORT: 4000
+        PORT: 3000
       },
       watch: false,
       instances: 1,

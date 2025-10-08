@@ -19,38 +19,89 @@
 				background-attachment: fixed !important;
 			}
 			
-			/* Position banner text to the right over center of kid's hoodie */
-			#banner .inner {
+			/* AGGRESSIVE positioning - override everything */
+			body.landing #banner .inner {
+				position: absolute !important;
+				top: 50% !important;
+				left: 50% !important;
+				transform: translate(-50%, -10%) !important;
 				text-align: center !important;
-				margin-left: auto !important;
-				margin-right: 0 !important;
-				padding-right: 3em !important;
-				padding-top: 6em !important;
-				max-width: 50% !important;
-				position: relative !important;
-				left: 25% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				max-width: 600px !important;
+				width: 95% !important;
 			}
 			
 			/* Ensure title and tagline styling */
 			#banner h2 {
 				margin-bottom: 0.5em !important;
 				color: #ffffff !important;
-				text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+				text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
+				white-space: nowrap !important;
+				font-size: 2.5em !important;
+				text-align: center !important;
+				width: 100% !important;
+				display: block !important;
 			}
 			
 			#banner p {
 				margin-top: 0.5em !important;
 				color: #ffffff !important;
 				text-shadow: 1px 1px 2px rgba(0,0,0,0.7) !important;
+				font-size: 1.3em !important;
+			}
+			
+			/* Drop shadow for upper left corner title */
+			#header h1 a {
+				text-shadow: 2px 2px 6px rgba(0,0,0,0.8) !important;
+			}
+			
+			/* FORCE MOVE with animation - Move header text to the right over dark hair */
+			@keyframes moveRight {
+				from { transform: translateX(0); }
+				to { transform: translateX(4em); }
+			}
+			
+			#header h1,
+			#header > h1,
+			#header.alt h1,
+			#header.alt > h1,
+			body.landing #header h1,
+			body.landing #header > h1,
+			body.landing #header.alt h1,
+			body.landing #header.alt > h1 {
+				animation: moveRight 0.1s forwards !important;
+				left: 0 !important;
+				margin-left: 0 !important;
+				padding-left: 0 !important;
+				position: absolute !important;
+			}
+			
+			/* Drop shadow for Contact Me button */
+			#banner .button {
+				box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+				border: 2px solid rgba(255,255,255,0.3) !important;
+			}
+			
+			#banner .button:hover {
+				box-shadow: 0 6px 20px rgba(0,0,0,0.6) !important;
+				transform: translateY(-2px) !important;
+				transition: all 0.3s ease !important;
 			}
 			
 			/* Mobile responsiveness for banner */
 			@media (max-width: 736px) {
-				#banner .inner {
-					max-width: 90% !important;
-					padding-left: 1.5em !important;
-					padding-top: 4em !important;
-					text-align: center !important;
+				body.landing #banner .inner {
+					transform: translate(-50%, 0%) !important;
+					max-width: 350px !important;
+				}
+				
+				#banner h2 {
+					font-size: 1.8em !important;
+				}
+				
+				#banner p {
+					font-size: 1.1em !important;
 				}
 			}
 		</style>
