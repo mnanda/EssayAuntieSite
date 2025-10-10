@@ -77,6 +77,20 @@
 				position: absolute !important;
 			}
 			
+			/* Justify Section 1 body text */
+			#one header p {
+				text-align: justify !important;
+			}
+			
+			/* Justify Section 3 body text */
+			#three p {
+				text-align: justify !important;
+			}
+			
+			#three header p {
+				text-align: justify !important;
+			}
+			
 			/* Drop shadow for Contact Me button */
 			#banner .button {
 				box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
@@ -102,6 +116,49 @@
 				
 				#banner p {
 					font-size: 1.1em !important;
+				}
+			}
+			
+			/* Success Stories Dropdown Styling */
+			.success-story-dropdown {
+				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+				transition: box-shadow 0.3s ease;
+			}
+			
+			.success-story-dropdown:hover {
+				box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+			}
+			
+			.dropdown-content {
+				transition: all 0.3s ease-in-out;
+			}
+			
+			.dropdown-content p {
+				font-size: 1.1em !important;
+				line-height: 1.6 !important;
+				margin-bottom: 1em !important;
+			}
+			
+			/* Mobile responsiveness for dropdowns */
+			@media (max-width: 768px) {
+				.success-story-dropdown {
+					margin-bottom: 1.5em !important;
+				}
+				
+				.dropdown-header {
+					padding: 1em !important;
+				}
+				
+				.dropdown-header h3 {
+					font-size: 1.3em !important;
+				}
+				
+				.dropdown-content {
+					padding: 1.5em !important;
+				}
+				
+				.dropdown-content p {
+					font-size: 1em !important;
 				}
 			}
 		</style>
@@ -161,7 +218,72 @@
 				</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style1">
+			<section id="two" class="wrapper">
+				<div class="inner">
+					<header class="special major narrow">
+						<h2><strong>THE A-HA! MOMENT</strong></h2>
+						<p><strong>There's nothing like the moment when the student and I finally lock on to <em>the</em> topic, <em>the</em> story that tells <em>their</em> story. A lot of students have similar backgrounds and similar interests so finding a unique angle can be tough. It's almost always hidden in a throwaway comment or random aside that comes up while we're exploring something else:</strong></p>
+					</header>
+					
+					<div style="text-align: left; max-width: 800px; margin: 0 auto; font-size: 1.3em; line-height: 1.6;">
+						<div style="margin: 2em 0; padding-left: 2em;">
+							<p><strong>–"I'm thinking of becoming a marine biologist, I mean, since I can't be a Bollywood princess"</strong></p>
+							<p><strong>–"This process is stressful! It's even worse than when I quit ballet"</strong></p>
+							<p><strong>–"Last summer was sooo boring I was stuck at home and the only thing that kept me sane was painting a mural in the garage."</strong></p>
+						</div>
+						
+						<p style="text-align: center; font-size: 1.4em; margin: 2em 0;"><strong><em>Wait, what?! You're into Bollywood? How seriously did you study ballet? You painted an entire mural? Tell me more…!</em></strong></p>
+						
+						<div style="margin: 4em 0;">
+							<h2 style="text-align: center; font-size: 2em; margin-bottom: 2em;"><strong>SUCCESS STORIES</strong></h2>
+							<p style="text-align: center; font-size: 1.3em; margin-bottom: 3em;"><strong>Each of the throwaway comments above led to a stellar and successful essay.</strong></p>
+							
+							<!-- Dropdown 1: Bollywood Princess -->
+							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
+								<div class="dropdown-header" onclick="toggleDropdown('bollywood')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
+									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Bollywood Princess</strong></h3>
+									<span class="dropdown-arrow" id="bollywood-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
+								</div>
+								<div class="dropdown-content" id="bollywood-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
+									<p><strong>The Candidate</strong>: this STEM-focused student loved Indian musicals so much that she made regular pilgrimages from Los Feliz to Indian-language theaters in Artesia!</p>
+									<p><strong>The Essay</strong>: this story showed her quirky and artsy side along with major passion and determination.</p>
+									<p><strong>The Outcome</strong>: she was accepted to every school she applied to and wound up at Brown.</p>
+								</div>
+							</div>
+							
+							<!-- Dropdown 2: Ex-Ballet Dancer -->
+							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
+								<div class="dropdown-header" onclick="toggleDropdown('ballet')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
+									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Ex-Ballet Dancer</strong></h3>
+									<span class="dropdown-arrow" id="ballet-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
+								</div>
+								<div class="dropdown-content" id="ballet-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
+									<p><strong>The Candidate</strong>: prior to quitting ballet, the student was on a professional track, taking serious dance classes five days a week. Additionally, her grandmother had been a dancer and her mother had trained seriously.</p>
+									<p><strong>The Essay</strong>: it focused on how, as a middle-schooler, she had to make a life-defining choice with huge implications for her future, her role in her family, and her own self-image. It demonstrated real maturity, self-awareness and gave her a chance to mention the remarkable discipline she gained from her dance training – part of her character which wasn't evident anywhere else in her application.</p>
+									<p><strong>The Outcome</strong>: she applied early to her first choice, Barnard, and was accepted.</p>
+								</div>
+							</div>
+							
+							<!-- Dropdown 3: The Muralist -->
+							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
+								<div class="dropdown-header" onclick="toggleDropdown('muralist')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
+									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Muralist</strong></h3>
+									<span class="dropdown-arrow" id="muralist-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
+								</div>
+								<div class="dropdown-content" id="muralist-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
+									<p><strong>The Candidate</strong>: this student was academically unexceptional, and had few interests beyond her boyfriend and her social life. She didn't have a "hook," and we really struggled to find a topic for her.</p>
+									<p><strong>The Essay</strong>: grounded at home and bored, the student painted a mural that spanned a wall in the garage. The story let her present herself as both creative and a do-er – someone capable of setting a big goal for herself and achieving it.</p>
+									<p><strong>The Outcome</strong>: she got into Emerson off the wait-list. An admissions officer told her parents "I couldn't stop thinking about that mural!"</p>
+									<p><strong>The Kicker</strong>: After we finished the essay, I finally saw the mural… and it was <em>terrible</em>! But it didn't matter because this student was not applying with an artistic portfolio, and the heart of the story was 100% true.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style1">
 				<div class="inner">
 					<div class="how-i-got-here-section" style="display: flex; align-items: flex-start; gap: 3em; text-align: justify;">
 						<div class="headshot-container" style="flex: 0 0 250px; text-align: center;">
@@ -208,21 +330,6 @@
 							}
 						}
 					</style>
-				</div>
-			</section>
-
-		<!-- Three -->
-			<section id="three" class="wrapper">
-				<div class="inner spotlight left">
-					<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-					<article>
-						<header>
-							<small>About Amanda</small>
-							<h2>Your College Essay Auntie</h2>
-						</header>
-						<p>Hi! I'm Amanda Marks, and I believe every student has a unique story worth telling. As your College Essay Auntie, I'm here to help you discover and articulate that story in a way that showcases your authentic self to admissions officers.</p>
-						<p>With years of experience in college counseling, I've helped hundreds of students transform their thoughts and experiences into compelling essays that open doors to their dream schools. My approach is personal, collaborative, and focused on bringing out your genuine voice—not creating something that sounds like everyone else.</p>
-					</article>
 				</div>
 			</section>
 
@@ -301,6 +408,37 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Custom JavaScript for Dropdown functionality -->
+			<script>
+				function toggleDropdown(storyId) {
+					const content = document.getElementById(storyId + '-content');
+					const arrow = document.getElementById(storyId + '-arrow');
+					
+					if (content.style.display === 'none' || content.style.display === '') {
+						content.style.display = 'block';
+						arrow.style.transform = 'rotate(180deg)';
+						arrow.innerHTML = '▲';
+					} else {
+						content.style.display = 'none';
+						arrow.style.transform = 'rotate(0deg)';
+						arrow.innerHTML = '▼';
+					}
+				}
+				
+				// Add hover effects for dropdown headers
+				document.addEventListener('DOMContentLoaded', function() {
+					const headers = document.querySelectorAll('.dropdown-header');
+					headers.forEach(function(header) {
+						header.addEventListener('mouseenter', function() {
+							this.style.background = 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)';
+						});
+						header.addEventListener('mouseleave', function() {
+							this.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
+						});
+					});
+				});
+			</script>
 
 	</body>
 </html>
