@@ -139,26 +139,44 @@
 				margin-bottom: 1em !important;
 			}
 			
-			/* Mobile responsiveness for dropdowns */
+			/* Success Stories Grid Layout */
+			.success-stories-grid {
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.story-column {
+				position: relative;
+			}
+			
+			.story-image img:hover {
+				transform: scale(1.05);
+				transition: transform 0.3s ease;
+			}
+			
+			.story-header:hover {
+				opacity: 0.8;
+				transition: opacity 0.3s ease;
+			}
+			
+			/* Mobile responsiveness for 3-column grid */
 			@media (max-width: 768px) {
-				.success-story-dropdown {
-					margin-bottom: 1.5em !important;
+				.success-stories-grid {
+					grid-template-columns: 1fr !important;
+					gap: 3em !important;
 				}
 				
-				.dropdown-header {
-					padding: 1em !important;
+				.story-image img {
+					width: 250px !important;
+					height: 180px !important;
 				}
 				
-				.dropdown-header h3 {
-					font-size: 1.3em !important;
+				.story-header h3 {
+					font-size: 1.5em !important;
 				}
 				
 				.dropdown-content {
-					padding: 1.5em !important;
-				}
-				
-				.dropdown-content p {
-					font-size: 1em !important;
+					padding: 1.2em !important;
 				}
 			}
 			
@@ -256,44 +274,58 @@
 					<div style="margin: 2em 0;">
 						<h2 style="text-align: center; font-size: 2em; margin-bottom: 2em;"><strong>SUCCESS STORIES</strong></h2>
 							
-							<!-- Dropdown 1: Bollywood Princess -->
-							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
-								<div class="dropdown-header" onclick="toggleDropdown('bollywood')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
-									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Bollywood Princess</strong></h3>
-									<span class="dropdown-arrow" id="bollywood-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
+							<!-- Three Column Layout for Success Stories -->
+							<div class="success-stories-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2em; margin-top: 2em;">
+								
+								<!-- Column 1: Bollywood Princess -->
+								<div class="story-column">
+									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/d302adb65785f7025439e8aa9cb0f21a" alt="Bollywood Princess" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+									</div>
+									<div class="story-header" onclick="toggleDropdown('bollywood')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Bollywood Princess</strong></h3>
+										<span class="dropdown-arrow" id="bollywood-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									</div>
+									<div class="dropdown-content" id="bollywood-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
+										<p><strong>The Candidate</strong>: this STEM-focused student loved Indian musicals so much that she made regular pilgrimages from Los Feliz to Indian-language theaters in Artesia!</p>
+										<p><strong>The Essay</strong>: this story showed her quirky and artsy side along with major passion and determination.</p>
+										<p><strong>The Outcome</strong>: she was accepted to every school she applied to and wound up at Brown.</p>
+									</div>
 								</div>
-								<div class="dropdown-content" id="bollywood-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
-									<p><strong>The Candidate</strong>: this STEM-focused student loved Indian musicals so much that she made regular pilgrimages from Los Feliz to Indian-language theaters in Artesia!</p>
-									<p><strong>The Essay</strong>: this story showed her quirky and artsy side along with major passion and determination.</p>
-									<p><strong>The Outcome</strong>: she was accepted to every school she applied to and wound up at Brown.</p>
+								
+								<!-- Column 2: Ex-Ballet Dancer -->
+								<div class="story-column">
+									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/f0fe99b4d76d0a477409aca4b28f4a1e" alt="Ballet Dancer" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+									</div>
+									<div class="story-header" onclick="toggleDropdown('ballet')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Ex-Ballet Dancer</strong></h3>
+										<span class="dropdown-arrow" id="ballet-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									</div>
+									<div class="dropdown-content" id="ballet-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
+										<p><strong>The Candidate</strong>: prior to quitting ballet, the student was on a professional track, taking serious dance classes five days a week. Additionally, her grandmother had been a dancer and her mother had trained seriously.</p>
+										<p><strong>The Essay</strong>: it focused on how, as a middle-schooler, she had to make a life-defining choice with huge implications for her future, her role in her family, and her own self-image. It demonstrated real maturity, self-awareness and gave her a chance to mention the remarkable discipline she gained from her dance training – part of her character which wasn't evident anywhere else in her application.</p>
+										<p><strong>The Outcome</strong>: she applied early to her first choice, Barnard, and was accepted.</p>
+									</div>
 								</div>
-							</div>
-							
-							<!-- Dropdown 2: Ex-Ballet Dancer -->
-							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
-								<div class="dropdown-header" onclick="toggleDropdown('ballet')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
-									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Ex-Ballet Dancer</strong></h3>
-									<span class="dropdown-arrow" id="ballet-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
+								
+								<!-- Column 3: The Muralist -->
+								<div class="story-column">
+									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/ad014da35d59b2ca9b63a1dbf10001d2" alt="Muralist" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+									</div>
+									<div class="story-header" onclick="toggleDropdown('muralist')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Muralist</strong></h3>
+										<span class="dropdown-arrow" id="muralist-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									</div>
+									<div class="dropdown-content" id="muralist-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
+										<p><strong>The Candidate</strong>: this student was academically unexceptional, and had few interests beyond her boyfriend and her social life. She didn't have a "hook," and we really struggled to find a topic for her.</p>
+										<p><strong>The Essay</strong>: grounded at home and bored, the student painted a mural that spanned a wall in the garage. The story let her present herself as both creative and a do-er – someone capable of setting a big goal for herself and achieving it.</p>
+										<p><strong>The Outcome</strong>: she got into Emerson off the wait-list. An admissions officer told her parents "I couldn't stop thinking about that mural!"</p>
+										<p><strong>The Kicker</strong>: After we finished the essay, I finally saw the mural… and it was <em>terrible</em>! But it didn't matter because this student was not applying with an artistic portfolio, and the heart of the story was 100% true.</p>
+									</div>
 								</div>
-								<div class="dropdown-content" id="ballet-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
-									<p><strong>The Candidate</strong>: prior to quitting ballet, the student was on a professional track, taking serious dance classes five days a week. Additionally, her grandmother had been a dancer and her mother had trained seriously.</p>
-									<p><strong>The Essay</strong>: it focused on how, as a middle-schooler, she had to make a life-defining choice with huge implications for her future, her role in her family, and her own self-image. It demonstrated real maturity, self-awareness and gave her a chance to mention the remarkable discipline she gained from her dance training – part of her character which wasn't evident anywhere else in her application.</p>
-									<p><strong>The Outcome</strong>: she applied early to her first choice, Barnard, and was accepted.</p>
-								</div>
-							</div>
-							
-							<!-- Dropdown 3: The Muralist -->
-							<div class="success-story-dropdown" style="margin-bottom: 2em; border: 1px solid #ddd; border-radius: 8px;">
-								<div class="dropdown-header" onclick="toggleDropdown('muralist')" style="cursor: pointer; padding: 1.5em; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: space-between; align-items: center; border-radius: 8px 8px 0 0;">
-									<h3 style="color: #333; font-size: 1.5em; margin: 0;"><strong>The Muralist</strong></h3>
-									<span class="dropdown-arrow" id="muralist-arrow" style="font-size: 1.2em; transition: transform 0.3s ease;">▼</span>
-								</div>
-								<div class="dropdown-content" id="muralist-content" style="display: none; padding: 2em; background: #fff; text-align: justify;">
-									<p><strong>The Candidate</strong>: this student was academically unexceptional, and had few interests beyond her boyfriend and her social life. She didn't have a "hook," and we really struggled to find a topic for her.</p>
-									<p><strong>The Essay</strong>: grounded at home and bored, the student painted a mural that spanned a wall in the garage. The story let her present herself as both creative and a do-er – someone capable of setting a big goal for herself and achieving it.</p>
-									<p><strong>The Outcome</strong>: she got into Emerson off the wait-list. An admissions officer told her parents "I couldn't stop thinking about that mural!"</p>
-									<p><strong>The Kicker</strong>: After we finished the essay, I finally saw the mural… and it was <em>terrible</em>! But it didn't matter because this student was not applying with an artistic portfolio, and the heart of the story was 100% true.</p>
-								</div>
+								
 							</div>
 						</div>
 					</div>
