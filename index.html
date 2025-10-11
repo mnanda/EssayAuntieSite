@@ -149,14 +149,19 @@
 				position: relative;
 			}
 			
-			.story-image img:hover {
+			.story-clickable-area:hover img {
 				transform: scale(1.05);
 				transition: transform 0.3s ease;
 			}
 			
-			.story-header:hover {
-				opacity: 0.8;
+			.story-clickable-area:hover {
+				opacity: 0.9;
 				transition: opacity 0.3s ease;
+			}
+			
+			.story-clickable-area:hover .dropdown-arrow {
+				transform: scale(1.1);
+				transition: transform 0.3s ease;
 			}
 			
 			/* Mobile responsiveness for 3-column grid */
@@ -279,12 +284,14 @@
 								
 								<!-- Column 1: Bollywood Princess -->
 								<div class="story-column">
-									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/d302adb65785f7025439e8aa9cb0f21a" alt="Bollywood Princess" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
-									</div>
-									<div class="story-header" onclick="toggleDropdown('bollywood')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
-										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Bollywood Princess</strong></h3>
-										<span class="dropdown-arrow" id="bollywood-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									<div class="story-clickable-area" onclick="toggleDropdown('bollywood')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<div class="story-image" style="margin-bottom: 1em;">
+											<img src="https://page.gensparksite.com/v1/base64_upload/d302adb65785f7025439e8aa9cb0f21a" alt="Bollywood Princess" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+										</div>
+										<div class="story-header">
+											<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Bollywood Princess</strong></h3>
+											<span class="dropdown-arrow" id="bollywood-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+										</div>
 									</div>
 									<div class="dropdown-content" id="bollywood-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
 										<p><strong>The Candidate</strong>: this STEM-focused student loved Indian musicals so much that she made regular pilgrimages from Los Feliz to Indian-language theaters in Artesia!</p>
@@ -295,12 +302,14 @@
 								
 								<!-- Column 2: Ex-Ballet Dancer -->
 								<div class="story-column">
-									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/f0fe99b4d76d0a477409aca4b28f4a1e" alt="Ballet Dancer" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
-									</div>
-									<div class="story-header" onclick="toggleDropdown('ballet')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
-										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Ex-Ballet Dancer</strong></h3>
-										<span class="dropdown-arrow" id="ballet-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									<div class="story-clickable-area" onclick="toggleDropdown('ballet')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<div class="story-image" style="margin-bottom: 1em;">
+											<img src="https://page.gensparksite.com/v1/base64_upload/f0fe99b4d76d0a477409aca4b28f4a1e" alt="Ballet Dancer" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+										</div>
+										<div class="story-header">
+											<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Ex-Ballet Dancer</strong></h3>
+											<span class="dropdown-arrow" id="ballet-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+										</div>
 									</div>
 									<div class="dropdown-content" id="ballet-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
 										<p><strong>The Candidate</strong>: prior to quitting ballet, the student was on a professional track, taking serious dance classes five days a week. Additionally, her grandmother had been a dancer and her mother had trained seriously.</p>
@@ -311,12 +320,14 @@
 								
 								<!-- Column 3: The Muralist -->
 								<div class="story-column">
-									<div class="story-image" style="text-align: center; margin-bottom: 1em;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/ad014da35d59b2ca9b63a1dbf10001d2" alt="Muralist" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
-									</div>
-									<div class="story-header" onclick="toggleDropdown('muralist')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
-										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Muralist</strong></h3>
-										<span class="dropdown-arrow" id="muralist-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+									<div class="story-clickable-area" onclick="toggleDropdown('muralist')" style="cursor: pointer; text-align: center; margin-bottom: 1em;">
+										<div class="story-image" style="margin-bottom: 1em;">
+											<img src="https://page.gensparksite.com/v1/base64_upload/ad014da35d59b2ca9b63a1dbf10001d2" alt="Muralist" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+										</div>
+										<div class="story-header">
+											<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Muralist</strong></h3>
+											<span class="dropdown-arrow" id="muralist-arrow" style="font-size: 1.5em; color: #fff; transition: transform 0.3s ease;">▼</span>
+										</div>
 									</div>
 									<div class="dropdown-content" id="muralist-content" style="display: none; background: rgba(255,255,255,0.9); padding: 1.5em; border-radius: 8px; text-align: justify; margin-top: 1em;">
 										<p><strong>The Candidate</strong>: this student was academically unexceptional, and had few interests beyond her boyfriend and her social life. She didn't have a "hook," and we really struggled to find a topic for her.</p>
