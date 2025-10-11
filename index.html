@@ -188,7 +188,7 @@
 				transition: transform 0.3s ease;
 			}
 			
-			/* Mobile responsiveness for single-column grid with larger images */
+			/* Mobile responsiveness for 3-column grid with full images */
 			@media (max-width: 768px) {
 				.success-stories-grid {
 					grid-template-columns: 1fr !important;
@@ -197,13 +197,13 @@
 				}
 				
 				.story-clickable-area {
-					width: 300px !important;
-					height: 450px !important;
+					width: 200px !important;
+					height: 300px !important;
 					max-width: 90% !important;
 				}
 				
 				.story-header h3 {
-					font-size: 1.3em !important;
+					font-size: 1.2em !important;
 				}
 				
 				.dropdown-content {
@@ -306,12 +306,12 @@
 						<h2 style="text-align: center; font-size: 2em; margin-bottom: 2em;"><strong>SUCCESS STORIES</strong></h2>
 							
 							<!-- Three Column Layout for Success Stories -->
-							<div class="success-stories-grid" style="display: grid; grid-template-columns: 1fr; gap: 3em; margin-top: 2em; max-width: 1200px; margin: 2em auto 0 auto;">
+							<div class="success-stories-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2em; margin-top: 2em; max-width: 1200px; margin: 2em auto 0 auto;">
 								
 								<!-- Column 1: Bollywood Princess -->
 								<div class="story-column">
-									<div class="story-clickable-area" onclick="toggleDropdown('bollywood')" style="cursor: pointer; display: block; width: 400px; height: 600px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/d302adb65785f7025439e8aa9cb0f21a" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block;">
+									<div class="story-clickable-area" onclick="toggleDropdown('bollywood')" style="cursor: pointer; display: block; width: 250px; height: 375px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/d302adb65785f7025439e8aa9cb0f21a" alt="" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block; background-color: rgba(255,255,255,0.1);">
 									</div>
 									<div class="story-header" style="text-align: center;">
 										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Bollywood Princess</strong></h3>
@@ -326,8 +326,8 @@
 								
 								<!-- Column 2: Ex-Ballet Dancer -->
 								<div class="story-column">
-									<div class="story-clickable-area" onclick="toggleDropdown('ballet')" style="cursor: pointer; display: block; width: 400px; height: 600px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/f0fe99b4d76d0a477409aca4b28f4a1e" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block;">
+									<div class="story-clickable-area" onclick="toggleDropdown('ballet')" style="cursor: pointer; display: block; width: 250px; height: 375px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/f0fe99b4d76d0a477409aca4b28f4a1e" alt="" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block; background-color: rgba(255,255,255,0.1);">
 									</div>
 									<div class="story-header" style="text-align: center;">
 										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Ex-Ballet Dancer</strong></h3>
@@ -342,8 +342,8 @@
 								
 								<!-- Column 3: The Muralist -->
 								<div class="story-column">
-									<div class="story-clickable-area" onclick="toggleDropdown('muralist')" style="cursor: pointer; display: block; width: 400px; height: 600px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
-										<img src="https://page.gensparksite.com/v1/base64_upload/ad014da35d59b2ca9b63a1dbf10001d2" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block;">
+									<div class="story-clickable-area" onclick="toggleDropdown('muralist')" style="cursor: pointer; display: block; width: 250px; height: 375px; margin: 0 auto 1em auto; position: relative; max-width: 100%;">
+										<img src="https://page.gensparksite.com/v1/base64_upload/ad014da35d59b2ca9b63a1dbf10001d2" alt="" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; border: 2px solid #ddd; pointer-events: none; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; display: block; background-color: rgba(255,255,255,0.1);">
 									</div>
 									<div class="story-header" style="text-align: center;">
 										<h3 style="color: #fff; font-size: 1.3em; margin-bottom: 0.5em;"><strong>The Muralist</strong></h3>
