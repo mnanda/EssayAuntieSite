@@ -379,7 +379,7 @@
 					<div style="max-width: 1200px; margin: 0 auto;">
 						
 						<!-- Parent Testimonials Column -->
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6em; margin-bottom: 2em;">
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8em !important; margin-bottom: 2em;">
 							<!-- Left Column: Parent Testimonials -->
 							<div>
 								<h3 style="color: #222 !important; text-align: center; margin-bottom: 1.5em;"><strong>Parents Say</strong></h3>
@@ -458,6 +458,11 @@
 						
 						.how-i-got-here-section .text-content h2 {
 							font-size: 2em !important;
+						}
+						
+						/* Desktop testimonials - wide margins */
+						#endorsements .inner div[style*="display: grid"][style*="grid-template-columns: 1fr 1fr"] {
+							gap: 8em !important;
 						}
 						
 						@media (max-width: 768px) {
