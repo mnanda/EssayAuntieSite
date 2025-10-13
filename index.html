@@ -373,13 +373,13 @@
 			<section id="endorsements" class="wrapper" style="background-color: #f0f4ff !important;">
 				<div class="inner" style="color: #222 !important;">
 					<header style="text-align: center; margin-bottom: 2em;">
-						<h2 style="color: #222 !important;"><strong>WHAT STUDENTS SAY</strong></h2>
+						<h2 style="color: #222 !important;"><strong>TESTIMONIALS</strong></h2>
 					</header>
 					
-					<div style="max-width: 1000px; margin: 0 auto;">
+					<div style="max-width: 1200px; margin: 0 auto;">
 						
 						<!-- Parent Testimonials Column -->
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4em; margin-bottom: 2em;">
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6em; margin-bottom: 2em;">
 							<!-- Left Column: Parent Testimonials -->
 							<div>
 								<h3 style="color: #222 !important; text-align: center; margin-bottom: 1.5em;"><strong>Parents Say</strong></h3>
@@ -477,6 +477,12 @@
 							}
 							.how-i-got-here-section .text-content h2 {
 								font-size: 1.5em !important;
+							}
+							
+							/* Testimonials responsive - make single column on mobile */
+							#endorsements div[style*="display: grid"] {
+								grid-template-columns: 1fr !important;
+								gap: 3em !important;
 							}
 						}
 					</style>
